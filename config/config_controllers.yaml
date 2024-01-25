@@ -1,0 +1,86 @@
+# Robot name goes here
+w_bot: # change the name
+  # default controller
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Controller 1
+  rear_right_wheel_controller: # change the name
+    type: velocity_controllers/JointVelocityController 
+    joint: rear_right_wheel_joint  
+    pid : {p: 100 , i: 0.01 , d: 2} 
+
+  # Controller 2
+  rear_left_wheel_controller: # change the name
+    type: velocity_controllers/JointVelocityController 
+    joint: rear_left_wheel_joint
+    pid : {p: 100, i: 0.01 , d: 2} 
+  # Controller 3
+  front_right_wheel_controller: # change the name
+    type: velocity_controllers/JointVelocityController 
+    joint: front_right_wheel_joint  
+    pid : {p: 100 , i: 0.01 , d: 2} 
+  # Controller 4
+  front_left_wheel_controller: # change the name
+    type: velocity_controllers/JointVelocityController 
+    joint: front_left_wheel_joint
+    pid : {p: 100, i: 0.01 , d: 2} 
+    
+  # Controller 5
+  front_left_steering_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: front_left_steering_joint
+    pid : {p: 400 , i: 0.02 , d: 1} 
+  # Controller 6
+  front_right_steering_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: front_right_steering_joint
+    pid : {p: 400 , i: 0.02 , d: 1} 
+  # Controller 7
+  rear_left_steering_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: rear_left_steering_joint
+    pid : {p: 400 , i: 0.02 , d: 1} 
+  # Controller 8
+  rear_right_steering_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: rear_right_steering_joint
+    pid : {p: 400 , i: 0.02 , d: 1} 
+    
+  # Controller 9
+  joint1_controller: # change the name
+    type: effort_controllers/JointPositionController  
+    joint: joint1
+    pid : {p: 100, i: 0.01 , d: 2} 
+  # Controller 10
+  joint2_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: joint2
+    pid : {p: 120 , i: 0.02 , d: 3} 
+  # Controller 11
+  joint3_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: joint3
+    pid : {p: 100, i: 0.01 , d: 2} 
+  # Controller 12
+  joint4_controller: # change the name
+    type: effort_controllers/JointPositionController  
+    joint: joint4
+    pid : {p: 120 , i: 0.01 , d: 2} 
+    # Controller 13
+  joint5_controller: # change the name
+    type: effort_controllers/JointPositionController 
+    joint: joint5
+    pid : {p: 120 , i: 0.02 , d: 3} 
+
+  finger_left_controller: # change the name
+    type: effort_controllers/JointPositionController
+    joint: finger_left_joint  
+    pid : {p: 100 , i: 0.01 , d: 2} 
+
+  # Controller 2
+  finger_right_controller: # change the name
+    type: effort_controllers/JointPositionController
+    joint: finger_right_joint
+    pid : {p: 100, i: 0.01 , d: 2} 

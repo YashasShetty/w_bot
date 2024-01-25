@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="w_bot">
+  <link
+    name="dummy_link">
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00200699862576349 -2.13312816867861E-17 0.285008038445475"
+        rpy="0 0 0" />
+      <mass
+        value="25" />
+      <inertia
+        ixx="0.151999823484139"
+        ixy="-9.91313365304454E-17"
+        ixz="-9.36517175515617E-06"
+        iyy="0.346524834291877"
+        iyz="9.70554700988311E-19"
+        izz="0.490920314893153" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dummy_joint0"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="dummy_link" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_right_steering">
+    <inertial>
+      <origin
+        xyz="0 -8.32667268468867E-17 -0.0948745119015975"
+        rpy="0 0 0" />
+      <mass
+        value="0.343325535524776" />
+      <inertia
+        ixx="0.00209048259873069"
+        ixy="4.0272764241542E-19"
+        ixz="2.04108871969044E-19"
+        iyy="0.00178958510713681"
+        iyz="-6.59981132775866E-19"
+        izz="0.000711889056391906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_right_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_right_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.210000000000003 -0.13 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_right_steering" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_right_wheel">
+    <inertial>
+      <origin
+        xyz="8.32667268468867E-17 0 0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="1.50180593472422" />
+      <inertia
+        ixx="0.00471014297750242"
+        ixy="-3.38536977027541E-18"
+        ixz="8.72037498563415E-20"
+        iyy="0.00471014297750241"
+        iyz="-8.2511266102166E-21"
+        izz="0.00773327256883762" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0575 -0.2175"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="front_right_steering" />
+    <child
+      link="front_right_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rear_right_steering">
+    <inertial>
+      <origin
+        xyz="0 -2.77555756156289E-17 -0.0948745119015975"
+        rpy="0 0 0" />
+      <mass
+        value="0.343325535524776" />
+      <inertia
+        ixx="0.00209048259873069"
+        ixy="6.37440896126237E-20"
+        ixz="-2.42768495506772E-19"
+        iyy="0.00178958510713681"
+        iyz="-4.51231378619127E-19"
+        izz="0.000711889056391905" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_right_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_right_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_steering_joint"
+    type="continuous">
+    <origin
+      xyz="-0.209999999999997 -0.13 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_right_steering" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_right_wheel">
+    <inertial>
+      <origin
+        xyz="5.55111512312578E-17 0 0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="1.50180593472422" />
+      <inertia
+        ixx="0.00471014297750242"
+        ixy="-3.35268579796889E-18"
+        ixz="-3.46813134033493E-20"
+        iyy="0.00471014297750242"
+        iyz="1.21802345198436E-20"
+        izz="0.00773327256883763" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.0575 -0.2175"
+      rpy="1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="rear_right_steering" />
+    <child
+      link="rear_right_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rear_left_steering">
+    <inertial>
+      <origin
+        xyz="-2.22044604925031E-16 -2.4980018054066E-16 -0.0948745119015974"
+        rpy="0 0 0" />
+      <mass
+        value="0.343325535524775" />
+      <inertia
+        ixx="0.00209047454949007"
+        ixy="1.55625560880888E-06"
+        ixz="3.58407778364854E-19"
+        iyy="0.00178959315637742"
+        iyz="-1.27594134373904E-18"
+        izz="0.000711889056391906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_left_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_left_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_steering_joint"
+    type="continuous">
+    <origin
+      xyz="-0.21 0.13 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rear_left_steering" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="rear_left_wheel">
+    <inertial>
+      <origin
+        xyz="2.77555756156289E-17 8.32667268468867E-17 -0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="1.50180593472422" />
+      <inertia
+        ixx="0.00471014297750242"
+        ixy="3.72845188547579E-18"
+        ixz="1.91429446079472E-19"
+        iyy="0.00471014297750242"
+        iyz="6.19925579287662E-20"
+        izz="0.00773327256883763" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/rear_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rear_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="-0.000297396611546957 0.0574992309101214 -0.2175"
+      rpy="1.5707963267949 0 -3.13642051554641" />
+    <parent
+      link="rear_left_steering" />
+    <child
+      link="rear_left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="front_left_steering">
+    <inertial>
+      <origin
+        xyz="0 -1.11022302462516E-16 -0.0948745119015975"
+        rpy="0 0 0" />
+      <mass
+        value="0.343325535524776" />
+      <inertia
+        ixx="0.00208995035472705"
+        ixy="-1.26438760644486E-05"
+        ixz="-2.44947869489773E-19"
+        iyy="0.00179011735114046"
+        iyz="-9.75110720971707E-19"
+        izz="0.000711889056391904" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_left_steering.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_left_steering.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_steering_joint"
+    type="continuous">
+    <origin
+      xyz="0.21 0.13 0.3175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="front_left_steering" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="front_left_wheel">
+    <inertial>
+      <origin
+        xyz="8.32667268468867E-17 0 -0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="1.50180593472422" />
+      <inertia
+        ixx="0.00471014297750242"
+        ixy="-3.20351669583436E-18"
+        ixz="-1.21972744404619E-19"
+        iyy="0.00471014297750241"
+        iyz="-6.08234008535393E-20"
+        izz="0.00773327256883762" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/front_left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="front_left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0.00241832101400169 0.0574491229130022 -0.2175"
+      rpy="1.5707963267949 0 3.09952248793317" />
+    <parent
+      link="front_left_steering" />
+    <child
+      link="front_left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link0">
+    <inertial>
+      <origin
+        xyz="-0.00261120850252764 8.0006626810153E-06 0.0344132892443377"
+        rpy="0 0 0" />
+      <mass
+        value="1.47778443330708" />
+      <inertia
+        ixx="0.00303565075376626"
+        ixy="1.04893676467589E-06"
+        ixz="3.04138651956345E-05"
+        iyy="0.00333146452556424"
+        iyz="6.92287819870057E-08"
+        izz="0.00503333109253216" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link0.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint0"
+    type="fixed">
+    <origin
+      xyz="0.0291177377817213 6.99790320677758E-05 0.315"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link0" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.00514447038004035 -0.00564667876105351 0.108030009212003"
+        rpy="0 0 0" />
+      <mass
+        value="0.733761313332628" />
+      <inertia
+        ixx="0.0017042580984216"
+        ixy="5.12975027445611E-05"
+        ixz="-0.000126172421903645"
+        iyy="0.00130723288592695"
+        iyz="0.000317940506748495"
+        izz="0.00162933063156095" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link0" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.94"
+      upper="2.94"
+      effort="10"
+      velocity="1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="0.000510064243320618 0.0704167862887677 0.0227420598478098"
+        rpy="0 0 0" />
+      <mass
+        value="0.693055133088331" />
+      <inertia
+        ixx="0.00227761838249711"
+        ixy="6.85951479039397E-05"
+        ixz="-5.60988557718838E-06"
+        iyy="0.000485305047647708"
+        iyz="-1.46012115706947E-05"
+        izz="0.00229981260725225" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="-0.0126431422968624 -0.0317828720046074 0.148"
+      rpy="0 0 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.13"
+      upper="1.57"
+      effort="200"
+      velocity="0.001" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.00195027935401905 0.0600873359212469 -0.0265049668315571"
+        rpy="0 0 0" />
+      <mass
+        value="0.481769271380306" />
+      <inertia
+        ixx="0.00128920032095572"
+        ixy="3.3740459885245E-05"
+        ixz="-3.49037053738101E-06"
+        iyy="0.000251223115947785"
+        iyz="0.000105164539831942"
+        izz="0.00129655764607978" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="-0.00503598542492214 0.154918168239888 -0.00750000000000006"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-2.61"
+      upper="2.54"
+      effort="150"
+      velocity="0.001" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.0358903012121067 6.96736098369094E-06 0.0129069830964411"
+        rpy="0 0 0" />
+      <mass
+        value="0.446391150983284" />
+      <inertia
+        ixx="0.000425196459187386"
+        ixy="-9.11997785920014E-09"
+        ixz="0.000122609286787366"
+        iyy="0.00069200931516819"
+        iyz="-2.35798983722215E-07"
+        izz="0.000489011598463673" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.666666666666667 0.698039215686274 0.768627450980392 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="-0.00438618085367151 0.13492872717665 -0.00170000000000002"
+      rpy="0 0 1.62820428870464" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.5"
+      upper="2.5"
+      effort="50"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="0.0460949377143167 0.0260205801671467 -0.479264421972465"
+        rpy="0 0 0" />
+      <mass
+        value="24.0319602764493" />
+      <inertia
+        ixx="1.23006701898128"
+        ixy="0.0432231898957994"
+        ixz="0.0299768808470771"
+        iyy="0.834148802374799"
+        iyz="0.0258639445075269"
+        izz="0.977772631731636" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-2.9"
+      upper="2.9"
+      effort="25"
+      velocity="1" />
+  </joint>
+  <link
+    name="gripper_palm_left">
+    <inertial>
+      <origin
+        xyz="0.000229835745878836 0.0207985081850281 0.0240642112150747"
+        rpy="0 0 0" />
+      <mass
+        value="0.0713145449930531" />
+      <inertia
+        ixx="3.01150026931823E-05"
+        ixy="3.30348229797603E-08"
+        ixz="1.10698296624696E-08"
+        iyy="3.30864068595941E-05"
+        iyz="1.32246210333814E-06"
+        izz="2.43258650049354E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/gripper_palm_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/gripper_palm_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_palm_left_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0016000000000001 0.114600000000015"
+      rpy="0 0 0.653139059166683" />
+    <parent
+      link="link5" />
+    <child
+      link="gripper_palm_left" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="finger_left">
+    <inertial>
+      <origin
+        xyz="0.0145561468305089 -0.00177284153980269 0.00378643187939565"
+        rpy="0 0 0" />
+      <mass
+        value="0.00670310492452354" />
+      <inertia
+        ixx="2.86335685110243E-06"
+        ixy="-6.24054240225482E-10"
+        ixz="-2.16473655628847E-07"
+        iyy="2.79738281964956E-06"
+        iyz="2.04746041239626E-09"
+        izz="1.78915238314422E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/finger_left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/finger_left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_left_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.058"
+      rpy="0 0 1.5693" />
+    <parent
+      link="gripper_palm_left" />
+    <child
+      link="finger_left" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="-0.0085"
+      effort="1"
+      velocity="0.001" />
+  </joint>
+  <link
+    name="gripper_palm_right">
+    <inertial>
+      <origin
+        xyz="-3.29660182182626E-05 -0.0208000625376352 0.0240641413795085"
+        rpy="0 0 0" />
+      <mass
+        value="0.0713160023535917" />
+      <inertia
+        ixx="3.01151741417681E-05"
+        ixy="5.12995378232713E-09"
+        ixz="1.51155601253143E-09"
+        iyy="3.30869800124167E-05"
+        iyz="-1.32263213649164E-06"
+        izz="2.43263243109523E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/gripper_palm_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/gripper_palm_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_palm_right_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.0016000000000001 0.114600000000015"
+      rpy="0 0 0.653139059166683" />
+    <parent
+      link="link5" />
+    <child
+      link="gripper_palm_right" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="finger_right">
+    <inertial>
+      <origin
+        xyz="-0.0140945198980545 -0.00163509283293525 0.00378643187939542"
+        rpy="0 0 0" />
+      <mass
+        value="0.00670310492452355" />
+      <inertia
+        ixx="2.863362753559E-06"
+        ixy="2.11758236813575E-22"
+        ixz="2.16483338101245E-07"
+        iyy="2.79737691719298E-06"
+        iyz="-1.6675961149069E-21"
+        izz="1.78915238314422E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/finger_right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://w_bot/meshes/finger_right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="finger_right_joint"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.058"
+      rpy="0 0 1.5693" />
+    <parent
+      link="gripper_palm_right" />
+    <child
+      link="finger_right" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0.0085"
+      effort="1"
+      velocity="0.001" />
+  </joint>
+  <transmission name="rear_right_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_right_wheel_joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_right_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="rear_left_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_left_wheel_joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_left_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_right_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_right_wheel_joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_right_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_left_wheel_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_wheel_joint">
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_wheel_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>VelocityJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_right_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_right_steering_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_right_steering_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="rear_right_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_right_steering_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_right_steering_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="rear_left_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="rear_left_steering_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="rear_left_steering_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </actuator>
+  </transmission>
+  <transmission name="front_left_steering_trans">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="front_left_steering_joint">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="front_left_steering_motor">
+      <mechanicalReduction>1</mechanicalReduction>
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+   </actuator>
+ </transmission>
+ 
+ <transmission name="joint1_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint1">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint1_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ 
+   <transmission name="joint2_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint2">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint2_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ 
+   <transmission name="joint3_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint3">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint3_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ 
+   <transmission name="joint4_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint4">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint4_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ 
+   <transmission name="joint5_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="joint5">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="joint5_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ <transmission name="finger_left_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_left_joint">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_left_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+ <transmission name="finger_right_trans">
+  <type>transmission_interface/SimpleTransmission</type>
+  <joint name="finger_right_joint">
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="finger_right_motor">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>EffortJointInterface</hardwareInterface>
+  </actuator>
+ </transmission>
+</robot>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- Name your robot here -->
+<robot name ="w_bot" xmlns:xacro="http://wiki.ros.org/xacro">
+
+<!-- Include your urdf files here -->
+	<!-- Include Robot's urdf filepath -->
+	<!-- Include Lidar's urdf filepath -->
+	<xacro:include filename="$(find w_bot)/urdf/w_bot.urdf"/>
+	<xacro:include filename="$(find w_bot)/urdf/ydlidar.urdf"/>
+
+<!-- Add your gazebo sensors here -->
+
+<!--  Gazebo plugin for control here is already added for you -->
+	<gazebo>
+		<plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+			<robotNamespace>/w_bot</robotNamespace>
+			<robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+			<legacyModeNS>true</legacyModeNS>
+		</plugin>
+	</gazebo>
+
+
+<!-- Create a joint between your robot and sensor -->
+<joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.02 0.01 0.0215"
+      rpy="0 1.57 0" />
+    <parent
+      link="gripper_palm_left" />
+    <child
+      link="base_laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+</robot>	
+
+
